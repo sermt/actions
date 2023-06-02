@@ -28,7 +28,7 @@ jobs:
         echo "finalizando login"
         
     - name: Build the Docker image
-      run: docker build . --tag sermi21/docker-actions:0.0.2
+      run: docker build -t sermi21/docker-actions:0.0.2 .
       
     - name: Push the Docker image
       run: docker push sermi21/docker-actions:0.0.2
