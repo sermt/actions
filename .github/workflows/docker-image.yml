@@ -28,6 +28,9 @@ jobs:
     - name: Build the Docker image
       run: |
         docker build -t sermi21/docker-actions:0.0.2 .
+        docker build -t sermi21/docker-actions:latest .
       
     - name: Push the Docker image
-      run: docker push sermi21/docker-actions:0.0.2
+      run: |
+        docker build -t sermi21/docker-actions:latest
+        docker push sermi21/docker-actions:0.0.2
