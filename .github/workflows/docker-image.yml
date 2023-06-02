@@ -39,11 +39,11 @@ jobs:
         NEW_VERSION: ${{ steps.version.outputs.version }}
       run: |
         docker build -t sermi21/docker-actions:$NEW_VERSION .
-        docker build -t sermi21/docker-actions:$NEW_VERSION .
+        docker build -t sermi21/docker-actions:latest .
       
     - name: Push the Docker image
       env:
         NEW_VERSION: ${{ steps.version.outputs.version }}
       run: |
         docker push sermi21/docker-actions:$NEW_VERSION
-        docker push sermi21/docker-actions:$NEW_VERSION
+        docker push sermi21/docker-actions:latest
