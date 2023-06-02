@@ -27,5 +27,7 @@ jobs:
         docker login -u $DOCKER_USER -p $DOCKER_PÀSSWORD
         echo "finalizando login"
         
-#    - name: Build the Docker image
-#      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+    - name: Build the Docker image
+      run: docker build . --tag sermi21/docker-actions:$(date +%s)
+    - name: Push the Docker image
+      run: docker push sermi21/docker-actions:$(date +%s) .
