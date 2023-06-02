@@ -24,7 +24,7 @@ jobs:
         DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
       run:
         echo "Iniciando login"
-        docker login -u $DOCKER_USER -p $DOCKER_PÀSSWORD docker.io
+        docker login -u sermi21 -p dckr_pat_L3Z3McDuK7XxK6tsamFE14fqVHQ
         echo "finalizando login"
         
     - name: Build the Docker image
